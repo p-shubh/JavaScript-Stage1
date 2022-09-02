@@ -1,4 +1,4 @@
-// setInterval(calculate, 1000)
+// var myvar = setInterval(calculate,1000);
 
 
 function calculate() {
@@ -13,25 +13,12 @@ function calculate() {
         // multipy i with a
         // result = a * i;
 
-    //    c = console.log(`${a}*${i}=${result}`)
-    
-        document.getElementById("multiplicaton").innerHTML+=(`${a}*${i}=${a * i}<br>`);
+        Result(a,i)
 
-        
     }
 
 }
 
-// function loop() {
-//     for (let i = 1; i  <=10 ; i++){
-//         // multipy i with a
-//         // result = a * i;
-
-//     //    c = console.log(`${a}*${i}=${result}`)
-    
-//         document.getElementById("multiplicaton").innerHTML+=(`${a}*${i}=${a * i}<br>`);
-//     }
-// }
-// setInterval(calculate, milliseconds)
-
-
+function Result(a,i){
+    setTimeout(function(){document.getElementById("multiplicaton").innerHTML+=(`${a}*${i}=${a*i}<br>`);}, 1000 * i);
+}
